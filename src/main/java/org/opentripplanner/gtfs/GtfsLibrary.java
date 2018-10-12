@@ -91,6 +91,8 @@ public class GtfsLibrary {
             throw new IllegalArgumentException("Taxi service not supported" + routeType);
         } else if (routeType >= 1600 && routeType < 1700) { //Self drive
             return TraverseMode.CAR;
+        } else if (routeType >= 1700 && routeType < 1800) { //Miscellaneous Service
+            return TraverseMode.GONDOLA;
         }
         /* Original GTFS route types. Should these be checked before TPEG types? */
         switch (routeType) {
